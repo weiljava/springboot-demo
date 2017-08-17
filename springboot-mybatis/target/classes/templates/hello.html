@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Getting Started: Serving Web Content</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+</head>
+<body>
+<p th:text="'Hello, ' + ${name} + '!'"/>
+
+<ol>
+    <li>Map循环：  
+        <div th:each="m:${map}"> 
+            <div th:text="${m.key}"></div>
+            <div th:text="${m.value}"></div>
+        </div>
+    </li>
+</ol>
+</body>
+</html>

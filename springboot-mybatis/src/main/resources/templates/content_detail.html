@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Getting Started: Serving Web Content</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+</head>
+<body>
+<h1>
+    Thymeleaf tutorial - Answer for exercise 1: bean 值替换，当作为静态文件时，product name显示为Red Chair，
+    当运行在容器中并提供product这个对象时，product name的值会自动替换为product.description对应的值。
+</h1>
+<h2>Product information</h2>
+<dl>
+    <dt></dt>
+    <dd th:text="${content.gcid}">123456789</dd>
+
+    <dt>CID</dt>
+    <dd th:text="${content.cid}">123456</dd>
+
+    <dt>内容名称</dt>
+    <dd th:text="${content.name}">内容名称测试</dd>
+
+    <dt>简介</dt>
+    <dd th:text="${content.description}">内容简介信息</dd>
+
+    <dt>价格</dt>
+    <dd th:text="${'¥'+#numbers.formatDecimal(content.price/100, 1, 2)}">180</dd>
+
+    <dt>生效时间</dt>
+    <dd th:text="${content.effectiveStartTime}">2014-12-01</dd>
+
+</dl>
+
+</body>
+</html>
